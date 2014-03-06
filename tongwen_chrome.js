@@ -92,5 +92,11 @@ chrome.extension.sendRequest(
         } else if (response[1] === 'simp') {
             TongWen.trans2Simp(document);
         }
+
+        if (document.URL.indexOf("memrise.com") != -1) {
+            document.addEventListener("DOMSubtreeModified", function(event){
+                TongWen.trans2Trad(document);
+            });
+        }
     }
 );
