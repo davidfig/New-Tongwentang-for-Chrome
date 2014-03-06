@@ -95,7 +95,12 @@ chrome.extension.sendRequest(
 
         if (document.URL.indexOf("memrise.com") != -1) {
             document.addEventListener("DOMSubtreeModified", function(event){
-                TongWen.trans2Trad(document);
+                TongWen.loadSettingData(response[0]);
+                if (response[1] === 'trad') {
+                    TongWen.trans2Trad(document);
+                } else if (response[1] === 'simp') {
+                    TongWen.trans2Simp(document);
+                }
             });
         }
     }
