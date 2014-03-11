@@ -1,12 +1,10 @@
 New-Tongwentang-for-Chrome
 ==========================
 
-Minor update to the amazng New Tongwentang Chrome tool that converts simplified and traditional mandarin.
+New Tongwentang was created by [softcup](https://github.com/softcup) and is hosted on http://tongwen.openfoundry.org/
 
-This conversion did not work automatically in memrise.com (a great language study utilty) since the HTML was loaded through AJAX.
+This fork includes a minor update to provide functionality to automatically convert after AJAX calls on certain websites.
 
-I added a check to catch the AJAX changes and apply the automatic conversion.
-
-This is great for converting the well-crafted HSK lessons to traditional characters.
+This is important for some lessons on memrise.com to use the well-crafted HSK lessons with traditional characters (note that the mems don't work as well as they're designed for simplified characters).
 
 The code is limited to the memrise.com domain since it causes a conversion on every DOM change (which happens often). I'm sure there's a better way to do it, but this works for now.
